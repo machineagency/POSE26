@@ -1,0 +1,48 @@
+# =============================================================================
+# Tool Calibration Parameters
+# =============================================================================
+# These values are specific to YOUR machine's physical tools. They come from
+# the JSON config files in science_jubilee/tools/configs/examples/ but may
+# need per-machine tuning.
+#
+# After running calibration notebooks (in examples/calibration/), update
+# the values here. The AI assistant reads this file to understand your tool limits.
+# =============================================================================
+
+syringe:
+  config_name: "10cc_syringe_liquidhandling"
+  unit: "milliliters"                    # Syringe volumes are in mL (NOT uL!)
+  max_volume: 10                         # maximum dispensable volume (mL)
+  min_volume: 0                          # minimum volume (mL)
+  min_range: -140                        # minimum extruder position (mm) — fully depressed
+  max_range: 0                           # maximum extruder position (mm) — fully retracted
+  mm_to_ml: 15                           # mm of extruder travel per mL dispensed
+  # Recalibrate: if you change the syringe barrel or tip
+
+pipette:
+  config_name: "P300_config"
+  brand: "Opentrons OT2"
+  model: "P300 Gen 2"
+  unit: "microliters"                    # Pipette volumes are in uL (NOT mL!)
+  max_volume: 300                        # maximum aspiration volume (uL)
+  min_volume: 20                         # minimum reliable volume (uL)
+  zero_position: 310                     # plunger home position before aspirate (mm)
+  blowout_position: 350                  # plunger position for blowout (mm)
+  drop_tip_position: 425                 # plunger position for tip ejection (mm)
+  mm_to_ul: 0.91                         # mm of plunger travel per uL
+  # Recalibrate: if plunger feels loose or volumes are inaccurate
+
+camera:
+  config_name: "camera_opencv"
+  backend: "opencv"                      # "opencv" (USB), "http" (remote Pi), or "picamera" (local Pi)
+  camera_index: 0                        # OS camera device index (0 = first USB camera)
+  output_dir: "./camera_output"          # where captured images are saved
+  focus_height: 100                      # Z height (mm) for in-focus images of labware
+  # Recalibrate: focus_height if you change the camera mount position
+
+as7341:
+  config_name: "AS7341"
+  protocol: "jsonrpc"
+  baudrate: 115200
+  port: ""                               # auto-detected on connect(); leave blank
+  # The 8 spectral channels (nm): 415, 445, 480, 515, 555, 590, 630, 680

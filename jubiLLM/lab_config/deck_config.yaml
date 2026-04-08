@@ -1,0 +1,76 @@
+# =============================================================================
+# Lab-Specific Deck & Tool Configuration
+# =============================================================================
+# This file describes YOUR lab's physical Jubilee setup: which tools are
+# installed, at which indices, and what labware goes where.
+#
+# The AI assistant reads this file to generate code that matches your hardware.
+# Update it whenever you change your physical setup.
+# =============================================================================
+
+machine:
+  # IP address of your Jubilee's Duet3D board (find in Duet Web Control)
+  address: "10.18.178.192"
+
+  # Deck definition file (found in science_jubilee/decks/deck_definition/)
+  # "youtubilee.json" is the standard 6-slot lab automation deck
+  deck: "youtubilee.json"
+
+# =============================================================================
+# Tool Assignments
+# =============================================================================
+# Each entry maps a Duet tool index to a science_jubilee tool class.
+# The index MUST match what's configured in your machine's config.g file.
+# Run m.configured_tools in Python to verify indices on your machine.
+tools:
+  - index: 0
+    type: AS7341                          # spectral sensor
+    name: "AS7341 spectral sensor"
+    config: "AS7341"                      # config filename (without .json)
+
+  - index: 1
+    type: Camera                          # camera (OpenCV USB webcam)
+    name: "Camera"
+    config: "camera_opencv.json"
+
+  - index: 2
+    type: Syringe                         # 10cc syringe for liquid handling
+    name: "syringe"
+    config: "10cc_syringe_liquidhandling"
+
+  - index: 3
+    type: Pipette                         # OT-2 P300 pipette
+    name: "Pipette"
+    config: "P300_config"
+
+# =============================================================================
+# Default Slot Layout
+# =============================================================================
+# The youtubilee deck has 6 SLAS-standard slots arranged in a 2x3 grid:
+#
+#   Slot 0 (left-front)    Slot 1 (right-front)
+#   Slot 2 (left-middle)   Slot 3 (right-middle)
+#   Slot 4 (left-back)     Slot 5 (right-back)
+#
+# Modify the labware and contents fields for each experiment.
+# The "labware" value must match a filename in:
+#   science_jubilee/labware/labware_definition/
+slots:
+  0:
+    labware: "generic_petri_dish_100ml"
+    contents: "water reservoir"
+  1:
+    labware: "greiner_24_wellplate_3300ul"
+    contents: "sample plate"
+  2:
+    labware: "generic_petri_dish_100ml"
+    contents: "colored water"
+  3:
+    labware: null
+    contents: "empty"
+  4:
+    labware: "generic_petri_dish_100ml"
+    contents: "tip trash"
+  5:
+    labware: "opentrons_96_tiprack_300ul"
+    contents: "P300 tiprack"
