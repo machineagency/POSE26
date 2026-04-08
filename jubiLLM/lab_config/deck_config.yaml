@@ -10,11 +10,11 @@
 
 machine:
   # IP address of your Jubilee's Duet3D board (find in Duet Web Control)
-  address: "10.18.178.192"
+  address: "192.168.1.2"
 
   # Deck definition file (found in science_jubilee/decks/deck_definition/)
   # "youtubilee.json" is the standard 6-slot lab automation deck
-  deck: "youtubilee.json"
+  deck: "Dubilee.json"
 
 # =============================================================================
 # Tool Assignments

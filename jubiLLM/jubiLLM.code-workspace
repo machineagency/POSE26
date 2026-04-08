@@ -1,10 +1,10 @@
 {
     "folders": [
         {
-            "path": "."
+            "path": "../science-jubilee"
         },
         {
-            "path": "../science-jubilee"
+            "path": ".."
         }
     ]
 }
