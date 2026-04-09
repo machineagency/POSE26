@@ -10,14 +10,20 @@ We are gathering scientists and engineers interested in using open-source techno
 During the workshop, we will break into teams and have hands-on activity sessions to set up automation workflows using [Science Jubilee](https://science-jubilee.readthedocs.io/en/latest/), a custom toolchanging machine.
 
 ### Materials
-We'll have machines equipped with the following tools:
+We have 6 Jubilees, each of which is equipped with some of the following:
 
 - a camera, for imaging the bed plate
 - a 10cc syringe, for liquid handling or gel extrusion 3D printing
 - a spectral sensor, for data collection
 - an OT-2 pipette, for precision liquid handling
+- a sonicator, for sonication
+- an electromagnet, for capping and uncapping
 
-We'll provide laptops with all relevant software already installed. If you'd prefer to install on your own laptop, see the [installation instructions](#installation) below.
+We'll also have:
+- An OT-2
+- a Genmitsu CNC router
+
+We'll provide laptops with all relevant software already installed for the Jubilees. If you'd prefer to install on your own laptop, see the [installation instructions](#installation) below.
 
 ### What Should I Make?
 Whatever you want! You don't necessarily have to use Jubilee, if you and your team have other interests. Here are some ideas:
