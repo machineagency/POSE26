@@ -75,7 +75,7 @@ A single notebook that walks through every tool on the machine: syringe serial d
 ---
 
 ## Installation
-We will have laptops with the relevant software installed so you don't have to deal with any installation issues. But if you'd like to use your personal computer:
+We will have laptops with the relevant software installed so you don't have to deal with any installation issues. But if you'd like to use your personal computer, use the following steps. Note that we are using the `pose26-demo` branch of science-jubilee!
 
 ### Mac
 
