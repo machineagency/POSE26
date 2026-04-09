@@ -110,4 +110,4 @@ python3 -m pip install urllib3==1.26.7
 
 This repo includes optional support for using an AI coding assistant that understands Science Jubilee. The assistant can help you understand existing notebooks, modify code for your experiment, and write new workflows.
 
-For setup instructions, see **[JUBILLM_SETUP.md](./JUBILLM_SETUP.md)**.
+For setup instructions, see **[jubiLLM setup](./jubiLLM/readme.md)**.
