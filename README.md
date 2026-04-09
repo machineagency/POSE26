@@ -84,6 +84,7 @@ git clone https://github.com/machineagency/science-jubilee.git
 git clone <this-repo-url>
 
 cd science-jubilee
+git checkout pose26-demo
 python3 -m pip install --upgrade pip
 python3 -m pip install -e .
 cd ..
