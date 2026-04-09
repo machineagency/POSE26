@@ -87,7 +87,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 git clone https://github.com/machineagency/science-jubilee.git
-git clone <this-repo-url>
+git clone https://github.com/machineagency/POSE26.git
 
 cd science-jubilee
 git checkout pose26-demo
