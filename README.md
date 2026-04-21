@@ -28,10 +28,9 @@ We'll provide laptops with all relevant software already installed for the Jubil
 ### What Should I Make?
 Whatever you want! You don't necessarily have to use Jubilee, if you and your team have other interests. Here are some ideas:
 
-- Implementing a color matching algorithm
-- Tuning (plastic or gel) 3D printing parameters using a video feed
 - Integrating a new tool for Jubilee, if you're CAD-inclined
 - Working on optimization algorithms that might be suited to Jubilee, if you're software-inclined
+- Exploring LLMs + machine workflows, if you're AI-inclined
 
 Whatever you work on, be sure to take some notes along the way so you can share with others what you've worked on!
 
