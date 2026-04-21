@@ -2,7 +2,7 @@
 
 An AI coding assistant for [Science Jubilee](https://github.com/machineagency/science-jubilee) lab automation. You describe what you want your robot to do in plain English, and the assistant writes executable Python code directly in your Jupyter notebooks.
 
-Science Jubilee is a powerful platform, but its Python API has a lot of moving parts — tool lifecycles, coordinate conventions, unit differences between tools, calibration prerequisites. jubiLLM encodes this domain knowledge so the AI assistant doesn't hallucinate generic robotics code — it writes code that actually works with *your* machine.
+The laptops provided for this workshop has Claude Code installed as an extension in VS Code. You can directly talk to it by clicking the Claude icon. It has access to all the files used in this workshop; you can use `@filename` to reference specific context. If a notebook gets long, `/compact` trims conversation history and keeps things responsive.
 
 ## Example Interaction
 
@@ -107,56 +107,16 @@ For better quality without switching to Claude Code:
 
 ---
 
-## Option B: Claude Code
 
-Claude Code can autonomously read files, edit notebooks, and browse the science-jubilee source code. It reads `CLAUDE.md` automatically for domain knowledge.
+## Things to try
 
-**Install:** Search "Claude Code" in the VS Code Extensions panel. You'll need a Claude subscription at [claude.ai](https://claude.ai).
-
-Or install the CLI:
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-**Use:** Open the workspace and start chatting. Describe what you want in plain English — Claude will read the relevant source files, understand your lab config, and write code directly into your notebook.
-
-If you prefer not to use the workspace file:
-```bash
-cd jubiLLM
-claude --add-dir ../science-jubilee
-```
-
----
-
-## Test Your Setup
-
-Try these queries with either tool:
+Try these queries with either agent:
 
 **Code understanding** — open [DemoOfAllTools.ipynb](../DemoOfAllTools.ipynb
-) and ask:
+) or any notebook and ask questions like:
 > "What does the serial dilution section do? What parameter controls the dilution ratio?"
 
-**Code generation** — ask:
+**Code generation** — try:
 > "Write a loop to photograph every well in a 96-wellplate in slot 3 using the camera on tool 1."
 
 Note that this is not rigorously verified. Please double-check the code jubiLLM generated before running it on the machine!
-
----
-
-## Repo Structure
-
-```
-CLAUDE.md                    # Safety rules, conventions, gotchas for the AI
-continue-config.yaml         # Continue.dev config — copy to ~/.continue/config.yaml
-lab_config/
-  deck_config.yaml           # Your machine's IP, tools, slot layout
-  tool_config.yaml           # Calibration parameters for each tool
-examples/                    # Tutorial notebooks organized by tool/topic
-DemoOfAllTools.ipynb         # Full multi-tool demo notebook
-```
-
-## Customizing
-
-- **New labware**: Create a JSON definition following the Opentrons format and place it in `science_jubilee/labware/labware_definition/`
-- **New tool configs**: Copy an example from `science_jubilee/tools/configs/examples/` to `configs/user/` and edit
-- **Add workflows**: Create new notebooks to do your lab automation work!
