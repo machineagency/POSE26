@@ -28,19 +28,19 @@ We'll provide laptops with all relevant software already installed for the Jubil
 ### What Should I Make?
 Whatever you want! You don't necessarily have to use Jubilee, if you and your team have other interests. Here are some ideas:
 
-- Implementing a color matching algorithm
-- Tuning (plastic or gel) 3D printing parameters using a video feed
 - Integrating a new tool for Jubilee, if you're CAD-inclined
 - Working on optimization algorithms that might be suited to Jubilee, if you're software-inclined
+- Exploring LLMs + machine workflows, if you're AI-inclined
 
 Whatever you work on, be sure to take some notes along the way so you can share with others what you've worked on!
 
 ### Connecting to Jubilee
-Much of this workshop involves doing various things with Jubilee, so the first step is to connect with the machine and open Jupyter Lab to talk to it. Here's how:
+If you want to use a Jubilee, the first step is to connect to the machine and open a computational notebook to talk to it. Here's how:
 
 1. Turn on the machine.
 2. Connect with the Ethernet cable.
-3. Open Jupyter Lab: you can do this via the Terminal by typing `jupyter lab` or through VS Code.
+3. Open this folder in VS Code.
+4. A dashboard is also available at http://192.168.1.2/ if you want to send individual commands.
 
 ### Repository Overview
 This repository has introductory notebooks for each tool, along with some other relevant documentation. They probably won't do exactly what you'd like, but will give you a starting point to work from! There's no need to run through every notebook; feel free to only use the ones relevant to your interests/your project idea.
@@ -70,7 +70,7 @@ Some helper notebooks for various calibration tasks, in case your project calls 
 Resources on how to add a new tool to science jubilee.
 
 #### [Demo of All Tools](./DemoOfAllTools.ipynb)
-A single notebook that walks through every tool on the machine: syringe serial dilution, pipette transfer, camera capture, and spectral measurement.
+A single notebook that walks through every tool on the machine: syringe serial dilution, pipette transfer, camera capture, and spectral measurement. This assumes some familiarity with Jubilee, so check out the example notebooks above for more details.
 
 ---
 
