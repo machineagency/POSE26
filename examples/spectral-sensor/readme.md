@@ -46,12 +46,7 @@ Copy [everything in this folder](xiao_firmware) into CIRCUITPY.
 
 When working with a new tool, you will need to add tool definition to Science Jubilee. Check [extending-science-jubilee](../extending-science-jubilee/readme.md) for more detail!
 
-The spectral sensor is already added to the science-jubilee library.### Installing CircuitPython on ESP32 (OPTIONAL EXERCISE)
-
-You can skip down to the science jubilee import cell below if you don't want to learn about installing firmware!
-
-As of February 2026, we can use the web [CircuitPython installer](https://circuitpython.org/board/seeed_xiao_esp32s3/) (note: browser should support serial communication) to install CircuitPython (v10.0.3).
-
+The spectral sensor is already added to the science-jubilee library.
 
 
 
